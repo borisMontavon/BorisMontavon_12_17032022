@@ -1,0 +1,11 @@
+/* Global rules */
+
+::selection {
+    background-color: var(--primary);
+    color: var(--white);
+    text-shadow: none;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}

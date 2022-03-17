@@ -1,0 +1,21 @@
+/* Colors variables */
+
+:root {
+    --primary: #FF0101;
+    --primary-opac: rgba(255, 1, 1, .7);
+    --white: #FFFFFF;
+    --black: #1C1F21;
+    --text-muted: #74798C;
+    --vermilion: rgba(255, 0, 0, .07);
+    --blue: rgba(74, 184, 255, .1);
+    --yellow: rgba(249, 206, 35, .1);
+    --pink: rgba(253, 81, 129, .1);
+    --nav-black: #020203;
+
+    /* Lightmode palette */
+    --card-light: #FBFBFB;
+
+    /* Dark mode palette */
+    --bg-dark: #1E1E1E;
+    --card-dark: #333333;
+}
