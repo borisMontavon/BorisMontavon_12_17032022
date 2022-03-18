@@ -1,7 +1,11 @@
+import HorizontalNav from "./components/horizontalNav";
+import VerticalNav from "./components/verticalNav";
+
 function ProfilPage() {
     return (
         <>
-            <p className="text-primary">test</p>
+            <HorizontalNav />
+            <VerticalNav />
         </>
     );
 }

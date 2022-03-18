@@ -12,7 +12,7 @@ test();
 
 function App() {
     return (
-        <div className="min-h-screen dark:bg-gray900">
+        <div className="min-h-screen dark:bg-bgDark">
             <Routes>
                 <Route path="/:id" element={<ProfilPage />} />
             </Routes>
