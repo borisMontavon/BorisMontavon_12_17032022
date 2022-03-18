@@ -5,13 +5,11 @@ module.exports = {
         fontFamily: {
             roboto: ["Roboto", "sans-serif"]
         },
-        fontSize: {
-            // "xs": ".625rem"
-        },
         colors: {
             transparent: "transparent",
             white: "var(--white)",
             black: "var(--black)",
+            gray: "var(--gray)",
             textMuted: "var(--text-muted)",
 
             primary: {
@@ -31,7 +29,11 @@ module.exports = {
             bgDark: "var(--bg-dark)",
             cardDark: "var(--card-dark)"
         },
-        extend: {}
+        extend: {
+            height: {
+                "vertNav": "calc(100vh - 6rem)"
+            }
+        }
     },
     plugins: []
 };
