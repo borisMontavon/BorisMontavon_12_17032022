@@ -6,7 +6,7 @@
     --white: #FFFFFF;
     --black: #000000;
     --gray: #1C1F21;
-    --text-muted: #74798C;
+    --text-muted: rgba(255, 255, 255, .6);
     --vermilion: rgba(255, 0, 0, .07);
     --blue: rgba(74, 184, 255, .1);
     --yellow: rgba(249, 206, 35, .1);
