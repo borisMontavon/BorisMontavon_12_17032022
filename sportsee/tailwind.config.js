@@ -22,12 +22,9 @@ module.exports = {
             pink: "var(--pink)", // Lipides icon bg
             navBlack: "var(--nav-black)",
 
-            // Light mode
-            cardLight: "var(--card-light)",
-
-            // Dark mode
             bgDark: "var(--bg-dark)",
-            cardDark: "var(--card-dark)"
+            cardDark: "var(--card-dark)",
+            cardLight: "var(--card-light)"
         },
         extend: {
             height: {

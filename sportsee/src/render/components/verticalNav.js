@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPersonBiking, faPersonSwimming, faDumbbell, faPersonSkiing } from "@fortawesome/free-solid-svg-icons";
-import ThemeSwitch from "./themeSwitch";
 
 function VerticalNav() {
     const sports = [
@@ -21,15 +20,12 @@ function VerticalNav() {
     );
 
     return (
-        <nav className="flex flex-col items-center justify-around h-vertNav w-28 bg-black">
+        <nav className="flex flex-col items-center justify-around h-vertNav w-28 bg-black fixed left-0">
             <div>
                 {sportsIcons}
             </div>
             <div className="flex flex-col items-center">
                 <p className="text-white text-xs font-medium -rotate-90 whitespace-nowrap">© SportSee 2022</p>
-                <div className="mt-14">
-                    <ThemeSwitch />
-                </div>
             </div>
         </nav>
     );

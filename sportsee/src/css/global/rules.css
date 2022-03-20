@@ -1,8 +1,7 @@
 /* Global rules */
 
 ::selection {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--primary-opac);
     text-shadow: none;
 }
 
