@@ -51,24 +51,24 @@ function ProfilPage() {
         <>
             <HorizontalNav />
             <VerticalNav />
-            <div className="ml-28 px-24 py-12 h-full">
+            <div className="ml-28 mt-24 px-24 py-12 h-full">
                 <div className="mb-14">
                     <Introduction firstNameData={firstNameData} />
                 </div>
-                <div className="grid grid-rows-2 grid-flow-col grid-cols-4 gap-8">
-                    <div className="col-span-3">
+                <div className="grid grid-rows-4 xl:grid-rows-2 grid-flow-col grid-cols-2 xl:grid-cols-4 gap-8">
+                    <div className="col-span-2 xl:col-span-3">
                         <ActivityGraph activityData={activityData} />
                     </div>
-                    <div className="col-span-1">
+                    <div className="col-span-2 xl:col-span-1">
                         <AverageSessionsGraph averageSessionsData={averageSessionsData} />
                     </div>
-                    <div className="col-span-1">
+                    <div className="xl:col-span-1">
                         <PerformanceGraph performanceData={performanceData} />
                     </div>
-                    <div className="col-span-1">
+                    <div className="xl:col-span-1">
                         <ScoreGraph scoreData={scoreData} />
                     </div>
-                    <div className="row-span-2">
+                    <div className="row-span-2 h-full">
                         <CountCards countData={countData} />
                     </div>
                 </div>

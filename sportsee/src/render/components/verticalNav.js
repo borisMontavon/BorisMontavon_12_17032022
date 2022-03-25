@@ -20,7 +20,7 @@ function VerticalNav() {
     );
 
     return (
-        <nav className="flex flex-col items-center justify-around h-vertNav w-28 bg-black fixed left-0">
+        <nav className="flex flex-col items-center justify-around h-vertNav w-28 bg-black fixed left-0 bottom-0 z-10">
             <div>
                 {sportsIcons}
             </div>

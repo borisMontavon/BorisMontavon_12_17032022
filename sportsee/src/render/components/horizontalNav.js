@@ -18,7 +18,7 @@ function HorizontalNav() {
     );
 
     return (
-        <nav className="flex justify-between items-center h-24 bg-black w-full">
+        <nav className="flex justify-between items-center h-24 bg-black w-full fixed top-0 z-10">
             <img
                 src={logo}
                 alt="Logo SportSee"

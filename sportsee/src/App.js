@@ -4,7 +4,7 @@ import ProfilPage from "./render/profilPage";
 
 function App() {
     return (
-        <div className="min-h-screen max-h-screen bg-bgDark">
+        <div className="min-h-screen bg-bgDark xl:overflow-hidden">
             <Routes>
                 <Route path="/:id" element={<ProfilPage />} />
             </Routes>

@@ -2,6 +2,19 @@ import PropTypes from "prop-types";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 function ActivityGraph({activityData}) {
+    const CustomTooltip = ({ active, payload }) => {
+        if (active) {
+            return (
+                <div className="bg-primary p-4 rounded-md">
+                    <p className="font-medium text-xs text-white mb-4">{payload[0].payload.tooltipKilogram}</p>
+                    <p className="font-medium text-xs text-white">{payload[0].payload.tooltipCalories}</p>
+                </div>
+            );
+        }
+        
+        return null;
+    };
+
     return (
         <div className="bg-cardDark rounded-md relative">
             <ResponsiveContainer
@@ -12,7 +25,7 @@ function ActivityGraph({activityData}) {
                     width={800}
                     height={300}
                     data={activityData}
-                    barCategoryGap={20}
+                    barCategoryGap={35}
                     margin={{
                         top: 65,
                         right: 20,
@@ -20,12 +33,32 @@ function ActivityGraph({activityData}) {
                         bottom: 10
                     }}
                 >
-                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                    <XAxis dataKey="day" axisLine={false} tickLine={false}  />
-                    <YAxis orientation="right" axisLine={false} tickLine={false} />
-                    <Tooltip />
-                    <Bar dataKey="kilogram" fill="var(--white)" maxBarSize={6} />
-                    <Bar dataKey="calories" fill="var(--primary)" maxBarSize={6} />
+                    <CartesianGrid
+                        strokeDasharray="3 8"
+                        vertical={false}
+                        stroke="var(--text-muted)"
+                    />
+                    <XAxis
+                        dataKey="day"
+                        axisLine={false}
+                        tickLine={false}
+                    />
+                    <YAxis
+                        orientation="right"
+                        axisLine={false}
+                        tickLine={false}
+                    />
+                    <Tooltip content={<CustomTooltip />} />
+                    <Bar
+                        dataKey="kilogram"
+                        fill="var(--white)"
+                        maxBarSize={6}
+                    />
+                    <Bar
+                        dataKey="calories"
+                        fill="var(--primary)"
+                        maxBarSize={6}
+                    />
                 </BarChart>
             </ResponsiveContainer>
             <div className="absolute top-2 left-4">
