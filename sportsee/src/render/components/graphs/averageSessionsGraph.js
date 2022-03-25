@@ -29,10 +29,13 @@ function AverageSessionsGraph({averageSessionsData}) {
                         bottom: 10
                     }}
                 >
-                    <XAxis dataKey="day" axisLine={false} tickLine={false} stroke="rgba(255, 255, 255, 0.55)"/>
-                    <Tooltip
-                        content={<CustomTooltip />}
+                    <XAxis
+                        dataKey="day"
+                        axisLine={false}
+                        tickLine={false}
+                        stroke="rgba(255, 255, 255, 0.55)"
                     />
+                    <Tooltip content={<CustomTooltip />} />
                     <Line
                         type="monotone"
                         dataKey="sessionLength"

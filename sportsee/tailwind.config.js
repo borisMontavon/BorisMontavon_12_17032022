@@ -16,10 +16,13 @@ module.exports = {
                 DEFAULT: "var(--primary)",
                 opac: "var(--primary-opac)"
             },
-            vermilion: "var(--vermilion)", // Calories icon bg
-            blue: "var(--blue)", // Proteines icon bg
-            yellow: "var(--yellow)", // Glucides icon bg
-            pink: "var(--pink)", // Lipides icon bg
+            vermilionOpac: "var(--vermilion-opac)",
+            blue: "var(--blue)",
+            blueOpac: "var(--blue-opac)",
+            yellow: "var(--yellow)",
+            yellowOpac: "var(--yellow-opac)",
+            pink: "var(--pink)",
+            pinkOpac: "var(--pink-opac)",
             navBlack: "var(--nav-black)",
 
             bgDark: "var(--bg-dark)",
