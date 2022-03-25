@@ -12,7 +12,7 @@ function App() {
             <VerticalNav />
             <Routes>
                 <Route path="/profil/:id" element={<ProfilPage />} />
-                <Route path="*" element={<ErrorPage />} />
+                <Route path="*" element={<ErrorPage title={"404"} content={"La page que vous recherchez n'existe pas..."} />} />
             </Routes>
         </div>
     );

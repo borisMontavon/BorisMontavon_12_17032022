@@ -8,7 +8,7 @@ import PerformanceGraph from "./components/graphs/performanceGraph";
 import ScoreGraph from "./components/graphs/scoreGraph";
 import CountCards from "./components/countCards";
 import ActivityGraph from "./components/graphs/activityGraph";
-import ProfilNotFoundPage from "./components/profilNotfoundPage";
+import ErrorPage from "./components/errorPage";
 
 function ProfilPage() {
     const { id } = useParams();
@@ -54,7 +54,7 @@ function ProfilPage() {
     }, [id]);
 
     if (!existingId) {
-        return <ProfilNotFoundPage />
+        return <ErrorPage title={"Profil inconnu"} content={"La profil que vous recherchez n'existe pas..."} />
     }
 
     return (
