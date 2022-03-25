@@ -305,6 +305,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column: span 2 / span 2;
 }.row-span-2{
   grid-row: span 2 / span 2;
+}.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}.my-10{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}.my-12{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}.my-16{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }.ml-28{
   margin-left: 7rem;
 }.mt-24{
@@ -317,6 +329,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.5rem;
 }.mb-4{
   margin-bottom: 1rem;
+}.mb-8{
+  margin-bottom: 2rem;
+}.mt-4{
+  margin-top: 1rem;
 }.inline{
   display: inline;
 }.flex{
@@ -402,6 +418,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }.p-2{
   padding: 0.5rem;
+}.p-6{
+  padding: 1.5rem;
 }.px-24{
   padding-left: 6rem;
   padding-right: 6rem;
@@ -420,6 +438,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.px-20{
   padding-left: 5rem;
   padding-right: 5rem;
+}.pt-12{
+  padding-top: 3rem;
+}.pr-24{
+  padding-right: 6rem;
+}.pl-52{
+  padding-left: 13rem;
+}.pt-36{
+  padding-top: 9rem;
+}.pb-12{
+  padding-bottom: 3rem;
 }.text-center{
   text-align: center;
 }.text-xl{
@@ -446,6 +474,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.text-base{
   font-size: 1rem;
   line-height: 1.5rem;
+}.text-8xl{
+  font-size: 6rem;
+  line-height: 1;
+}.text-9xl{
+  font-size: 8rem;
+  line-height: 1;
+}.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}.text-7xl{
+  font-size: 4.5rem;
+  line-height: 1;
 }.font-bold{
   font-weight: 700;
 }.font-medium{
@@ -464,6 +504,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: var(--white);
 }.text-textMuted{
   color: var(--text-muted);
+}.underline{
+  text-decoration-line: underline;
 }.transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -509,6 +551,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 3 / span 3;
   }.xl\:col-span-1{
     grid-column: span 1 / span 1;
+  }.xl\:ml-28{
+    margin-left: 7rem;
+  }.xl\:mt-24{
+    margin-top: 6rem;
   }.xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }.xl\:grid-rows-2{
