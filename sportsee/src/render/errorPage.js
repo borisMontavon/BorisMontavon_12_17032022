@@ -2,6 +2,12 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPersonDrowning } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * Component for rendering the error page.
+ *
+ * @component
+ */
+
 function ErrorPage({title, content}) {
     return (
         <div className="pr-24 pl-52 pt-36 pb-12 flex flex-col justify-center items-center">
@@ -15,8 +21,14 @@ function ErrorPage({title, content}) {
 }
 
 ErrorPage.propTypes = {
-    title: PropTypes.string,
-    content: PropTypes.string
+    /**
+     * Title of the page
+     */
+    title: PropTypes.string.isRequired,
+    /**
+     * Error message
+     */
+    content: PropTypes.string.isRequired
 }
 
 export default ErrorPage;

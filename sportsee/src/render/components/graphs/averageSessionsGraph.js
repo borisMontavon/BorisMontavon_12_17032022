@@ -1,6 +1,16 @@
 import PropTypes from "prop-types";
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
+/**
+ * Chart component for showing average sessions details of the user.
+ * 
+ * Displays a {@link https://recharts.org/en-US/api/LineChart|Line Chart} graph from the library {@link https://recharts.org/en-US|Recharts}.
+ * 
+ * Called from parent component {@link ProfilPage|&lt;ProfilPage /&gt;}.
+ *
+ * @component
+ */
+
 function AverageSessionsGraph({averageSessionsData}) {
     const CustomTooltip = ({ active, payload }) => {
         if (active) {
@@ -54,7 +64,10 @@ function AverageSessionsGraph({averageSessionsData}) {
 }
 
 AverageSessionsGraph.propTypes = {
-    averageSessionsData: PropTypes.array
+    /**
+     * User's average sessions data
+     */
+    averageSessionsData: PropTypes.array.isRequired
 }
 
 export default AverageSessionsGraph;

@@ -1,5 +1,13 @@
 import PropTypes from "prop-types";
 
+/**
+ * Component for rendering the first name of the user and a motivational quote.
+ * 
+ * Called from parent component {@link ProfilPage|&lt;ProfilPage /&gt;}.
+ *
+ * @component
+ */
+
 function Introduction({firstNameData}) {
     return (
         <>
@@ -13,7 +21,10 @@ function Introduction({firstNameData}) {
 }
 
 Introduction.propTypes = {
-    firstNameData: PropTypes.object
+    /**
+     * User's first name
+     */
+    firstNameData: PropTypes.object.isRequired
 }
 
 export default Introduction;

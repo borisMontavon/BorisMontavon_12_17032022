@@ -1,5 +1,21 @@
+/**
+ * Performance data formatting service.
+ * @class
+ */
+
 class PerformanceDataService {
+
+    /** 
+     * 
+     * Formats the data fetched from the {@link PERFORMANCE_ROUTE|performance API} into usable data for the {@link PerformanceGraph|&lt;PerformanceGraph /&gt;} component to render a {@link https://recharts.org/en-US/api/RadarChart|Radar Chart}.
+     * 
+     * @param {Object} performanceData Data fetched from the API
+     * @return {Array} Formatted data used by {@link https://recharts.org/en-US/api/RadarChart|Radar Chart} component
+     * 
+    */
     static formatPerformanceData(performanceData) {
+        
+        // Translates english labels into french labels
         function formatKind(kind) {
             switch (kind) {
                 case "cardio":

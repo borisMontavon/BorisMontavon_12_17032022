@@ -19,6 +19,16 @@ import CountCards from "./components/countCards";
 import ActivityGraph from "./components/graphs/activityGraph";
 import ErrorPage from "./errorPage";
 
+/**
+ * Component for rendering the profil page.
+ * 
+ * Renders all the childs components : {@link Introduction|&lt;Introduction /&gt;}, {@link AverageSessionsGraph|&lt;AverageSessionsGraph /&gt;}, {@link PerformanceGraph|&lt;PerformanceGraph /&gt;}, {@link ScoreGraph|&lt;ScoreGraph /&gt;}, {@link CountCards|&lt;CountCards /&gt;}, {@link ActivityGraph|&lt;ActivityGraph /&gt;}, {@link ErrorPage|&lt;ErrorPage /&gt;}.
+ * 
+ * Uses all the services to fetch, format and forward the data into the childs components.
+ *
+ * @component
+ */
+
 function ProfilPage() {
     const { id } = useParams();
     const [firstNameData, setFirstNameData] = useState({});
@@ -35,6 +45,7 @@ function ProfilPage() {
         async function getData() {
             const userData = await DataService.GetUserData(id);
             
+            // We need to check if the data actually exists because the API doesn't send back any error code but instead sends a random string saying there is no user data
             if (userData.data === undefined) {
                 setIsExistingId(false);
             } else {

@@ -1,6 +1,16 @@
 import PropTypes from "prop-types";
 import { Radar, RadarChart, PolarGrid,  PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
+/**
+ * Component for showing performance details of the user.
+ * 
+ * Displays a {@link https://recharts.org/en-US/api/RadarChart|Radar Chart} graph from the library {@link https://recharts.org/en-US|Recharts}.
+ * 
+ * Called from parent component {@link ProfilPage|&lt;ProfilPage /&gt;}.
+ *
+ * @component
+ */
+
 function PerformanceGraph({performanceData}) {
     return (
         <div className="bg-cardLight rounded-md relative">
@@ -20,7 +30,10 @@ function PerformanceGraph({performanceData}) {
 }
 
 PerformanceGraph.propTypes = {
-    performanceData: PropTypes.array
+    /**
+     * User's performance data
+     */
+    performanceData: PropTypes.array.isRequired
 }
 
 export default PerformanceGraph;

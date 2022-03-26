@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/logo.svg";
 
+/**
+ * Component for rendering the horizontal navbar.
+ * 
+ * Called in App.js render function.
+ *
+ * @component
+ */
+
 function HorizontalNav() {
     const links = [
         "Accueil",

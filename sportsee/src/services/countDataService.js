@@ -1,7 +1,20 @@
 import { faFireFlameCurved, faDrumstickBite, faAppleWhole, faBurger } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * Counters data formatting service.
+ * @class
+ */
+
 class CountDataService {
-    // User consumed count data formatting
+    
+    /** 
+     * 
+     * Formats the data fetched from the {@link USER_ROUTE|user API} into usable data for the {@link CountCards|&lt;CountCards /&gt;} component.
+     * 
+     * @param {Object} userData Data fetched from the API
+     * @return {Array} Formatted data used by {@link CountCards|&lt;CountCards /&gt;} component
+     * 
+    */
     static formatCountData(userData) {       
         return [
             {

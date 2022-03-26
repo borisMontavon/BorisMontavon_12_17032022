@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+/**
+ * Component for rendering the home page.
+ *
+ * @component
+ */
+
 function HomePage() {
     const [id, setId] = useState("");
 
