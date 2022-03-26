@@ -1,6 +1,12 @@
 import PropTypes from "prop-types";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
+/**
+ * Component for showing activity details of the user.
+ *
+ * @component
+ */
+
 function ActivityGraph({activityData}) {
     const CustomTooltip = ({ active, payload }) => {
         if (active) {
@@ -69,6 +75,9 @@ function ActivityGraph({activityData}) {
 }
 
 ActivityGraph.propTypes = {
+    /**
+     * User's activity data
+     */
     activityData: PropTypes.array
 }
 
