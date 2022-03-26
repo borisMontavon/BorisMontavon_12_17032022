@@ -1,14 +1,23 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
+// Services imports
 import DataService from "../services/dataService";
-import DataFormattingService from "../services/dataFormattingService";
+import CountDataService from "../services/countDataService";
+import ScoreDataService from "../services/scoreDataService";
+import NameDataService from "../services/nameDataService";
+import ActivityDataService from "../services/activityDataService";
+import AverageSessionDataService from "../services/averageSessionDataService";
+import PerformanceDataService from "../services/performanceDataService";
+
+// Components
 import Introduction from "./components/introduction";
 import AverageSessionsGraph from "./components/graphs/averageSessionsGraph";
 import PerformanceGraph from "./components/graphs/performanceGraph";
 import ScoreGraph from "./components/graphs/scoreGraph";
 import CountCards from "./components/countCards";
 import ActivityGraph from "./components/graphs/activityGraph";
-import ErrorPage from "./components/errorPage";
+import ErrorPage from "./errorPage";
 
 function ProfilPage() {
     const { id } = useParams();
@@ -18,7 +27,8 @@ function ProfilPage() {
     const [performanceData, setPerformanceData] = useState([]);
     const [scoreData, setScoreData] = useState({});
     const [countData, setCountData] = useState([]);
-    const [existingId, setExistingId] = useState(false);
+    const [isExistingId, setIsExistingId] = useState(true);
+    const [isLoadedProfile, setIsLoadedProfile] = useState(false);
 
     useEffect(() => {
 
@@ -26,35 +36,42 @@ function ProfilPage() {
             const userData = await DataService.GetUserData(id);
             
             if (userData.data === undefined) {
-                setExistingId(false);
+                setIsExistingId(false);
             } else {
-                setExistingId(true);
+                setIsExistingId(true);
 
                 // Saving in a state the firstName formatted data we got from the service
-                setFirstNameData(DataFormattingService.formatNameData(userData));
+                setFirstNameData(NameDataService.formatNameData(userData));
 
                 // Saving in a state the activity formatted data we got from the service
-                setActivityData(DataFormattingService.formatActivityData(await DataService.GetActivityData(id)));
+                setActivityData(ActivityDataService.formatActivityData(await DataService.GetActivityData(id)));
 
                 // Saving in a state the average sessions formatted data we got from the service
-                setAverageSessionsData(DataFormattingService.formatAverageSessionData(await DataService.GetAverageSessionsData(id)));
+                setAverageSessionsData(AverageSessionDataService.formatAverageSessionData(await DataService.GetAverageSessionsData(id)));
 
                 // Saving in a state the performance formatted data we got from the service
-                setPerformanceData(DataFormattingService.formatPerformanceData(await DataService.GetPerformanceData(id)));
+                setPerformanceData(PerformanceDataService.formatPerformanceData(await DataService.GetPerformanceData(id)));
 
                 // Saving in a state the score formatted data we got from the service
-                setScoreData(DataFormattingService.formatScoreData(userData));
+                setScoreData(ScoreDataService.formatScoreData(userData));
 
                 // Saving in a state the consumed count formatted data we got from the service
-                setCountData(DataFormattingService.formatCountData(userData));
+                setCountData(CountDataService.formatCountData(userData));
+
+                // Saving in a state the information that the profile has been successfully loaded
+                setIsLoadedProfile(true);
             }
         }
 
         getData();
     }, [id]);
 
-    if (!existingId) {
+    if (!isExistingId) {
         return <ErrorPage title={"Profil inconnu"} content={"La profil que vous recherchez n'existe pas..."} />
+    }
+
+    if (!isLoadedProfile) {
+        return <p className="text-white">Loading...</p>
     }
 
     return (

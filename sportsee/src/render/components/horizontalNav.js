@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo/logo.svg";
 
 function HorizontalNav() {
@@ -19,11 +20,13 @@ function HorizontalNav() {
 
     return (
         <nav className="flex justify-between items-center h-24 bg-black w-full fixed top-0 z-10">
-            <img
-                src={logo}
-                alt="Logo SportSee"
-                className="h-14 w-auto px-8"
-            />
+            <Link to="/">
+                <img
+                    src={logo}
+                    alt="Logo SportSee"
+                    className="h-14 w-auto px-8"
+                />
+            </Link>
             <ul className="flex justify-between px-20 w-9/12">
                 {navLinks}
             </ul>
