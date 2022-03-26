@@ -333,6 +333,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2rem;
 }.mt-4{
   margin-top: 1rem;
+}.mt-14{
+  margin-top: 3.5rem;
+}.mt-20{
+  margin-top: 5rem;
 }.inline{
   display: inline;
 }.flex{
@@ -394,6 +398,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   white-space: nowrap;
 }.rounded-md{
   border-radius: 0.375rem;
+}.border{
+  border-width: 1px;
+}.border-transparent{
+  border-color: transparent;
 }.bg-bgDark{
   background-color: var(--bg-dark);
 }.bg-vermilionOpac{
@@ -438,6 +446,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.px-20{
   padding-left: 5rem;
   padding-right: 5rem;
+}.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }.pt-12{
   padding-top: 3rem;
 }.pr-24{
@@ -506,6 +520,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: var(--text-muted);
 }.underline{
   text-decoration-line: underline;
+}.outline-0{
+  outline-width: 0px;
 }.transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -541,10 +557,20 @@ Ensure the default browser behavior of the `hidden` attribute.
     text-shadow: none;
 }html {
     font-family: "Roboto", sans-serif;
+}.hover\:border-primary:hover{
+  border-color: var(--primary);
 }.hover\:bg-primary:hover{
   background-color: var(--primary);
 }.hover\:text-primary:hover{
   color: var(--primary);
+}.focus\:border-primary:focus{
+  border-color: var(--primary);
+}.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}.focus-visible\:outline-none:focus-visible{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }.group:hover .group-hover\:text-white{
   color: var(--white);
 }@media (min-width: 1280px){.xl\:col-span-3{
