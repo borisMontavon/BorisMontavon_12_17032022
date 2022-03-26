@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
 import CountCard from "./countCard";
 
+/**
+ * Component for mapping all the counters data into {@link CountCard|&lt;CountCard /&gt;} child components.
+ * 
+ * Called from parent component {@link ProfilPage|&lt;ProfilPage /&gt;}.
+ *
+ * @component
+ */
+
 function CountCards({countData}) {
     const countCardsList = countData.map((item, index) =>
         <CountCard
@@ -21,7 +29,10 @@ function CountCards({countData}) {
 }
 
 CountCards.propTypes = {
-    countData: PropTypes.array
+    /**
+     * User's counters data
+     */
+    countData: PropTypes.array.isRequired
 }
 
 export default CountCards;

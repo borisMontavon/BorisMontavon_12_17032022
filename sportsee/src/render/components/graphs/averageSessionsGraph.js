@@ -3,6 +3,10 @@ import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 /**
  * Chart component for showing average sessions details of the user.
+ * 
+ * Displays a {@link https://recharts.org/en-US/api/LineChart|Line Chart} graph from the library {@link https://recharts.org/en-US|Recharts}.
+ * 
+ * Called from parent component {@link ProfilPage|&lt;ProfilPage /&gt;}.
  *
  * @component
  */
@@ -63,7 +67,7 @@ AverageSessionsGraph.propTypes = {
     /**
      * User's average sessions data
      */
-    averageSessionsData: PropTypes.array
+    averageSessionsData: PropTypes.array.isRequired
 }
 
 export default AverageSessionsGraph;

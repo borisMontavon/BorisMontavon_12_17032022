@@ -12,7 +12,8 @@
     "templates": {
       "better-docs": {
         "name": "SportSee Jsdoc"
-      }
+      },
+      "cleverLinks": true
     },
     "opts": {
       "destination": "docs",

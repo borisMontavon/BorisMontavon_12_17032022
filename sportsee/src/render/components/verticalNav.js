@@ -1,6 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPersonBiking, faPersonSwimming, faDumbbell, faPersonSkiing } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * Component for rendering the vertical navbar.
+ * 
+ * Called in App.js render function.
+ *
+ * @component
+ */
+
 function VerticalNav() {
     const sports = [
         {"sport": faPersonSkiing, "title": "Ski/snow"},

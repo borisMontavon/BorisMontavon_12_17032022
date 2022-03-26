@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+/**
+ * Component for creating a card displaying a counter for a certain unit given in props.
+ * 
+ * Called from parent component {@link CountCards|&lt;CountCards /&gt;}.
+ *
+ * @component
+ */
+
 function CountCard({count, label, iconBg, iconColor, icon}) {
     return (
         <div className="flex items-center rounded-md bg-cardDark px-6 py-6">
@@ -16,8 +24,26 @@ function CountCard({count, label, iconBg, iconColor, icon}) {
 }
 
 CountCard.propTypes = {
-    count: PropTypes.string,
-    label: PropTypes.string
+    /**
+     * Number in the unit given
+     */
+    count: PropTypes.string.isRequired,
+    /**
+     * Label of the unit
+     */
+    label: PropTypes.string.isRequired,
+    /**
+     * Background-color of the icon container
+     */
+    iconBg: PropTypes.string.isRequired,
+    /**
+     * Color of the icon
+     */
+    iconColor: PropTypes.string.isRequired,
+    /**
+     * Icon object (from {@link https://fontawesome.com/icons|Font Awesome})
+     */
+    icon: PropTypes.object.isRequired,
 }
 
 export default CountCard;

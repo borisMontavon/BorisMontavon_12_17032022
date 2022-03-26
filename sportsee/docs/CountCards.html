@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> CountCards</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">SportSee Jsdoc</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ActivityDataService.html">ActivityDataService</a></li><li><a href="AverageSessionDataService.html">AverageSessionDataService</a></li><li><a href="CountDataService.html">CountDataService</a></li><li><a href="DataService.html">DataService</a></li><li><a href="NameDataService.html">NameDataService</a></li><li><a href="PerformanceDataService.html">PerformanceDataService</a></li><li><a href="ScoreDataService.html">ScoreDataService</a></li></ul><h3>Components</h3><ul><li><a href="ActivityGraph.html">ActivityGraph</a></li><li><a href="AverageSessionsGraph.html">AverageSessionsGraph</a></li><li><a href="CountCard.html">CountCard</a></li><li><a href="CountCards.html">CountCards</a></li><li><a href="ErrorPage.html">ErrorPage</a></li><li><a href="HomePage.html">HomePage</a></li><li><a href="HorizontalNav.html">HorizontalNav</a></li><li><a href="Introduction.html">Introduction</a></li><li><a href="PerformanceGraph.html">PerformanceGraph</a></li><li><a href="ProfilPage.html">ProfilPage</a></li><li><a href="ScoreGraph.html">ScoreGraph</a></li><li><a href="VerticalNav.html">VerticalNav</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ACTIVITY_ROUTE">ACTIVITY_ROUTE</a></li><li><a href="global.html#apiCall">apiCall</a></li><li><a href="global.html#AVERAGE_SESSIONS_ROUTE">AVERAGE_SESSIONS_ROUTE</a></li><li><a href="global.html#HOST">HOST</a></li><li><a href="global.html#PERFORMANCE_ROUTE">PERFORMANCE_ROUTE</a></li><li><a href="global.html#USER_ROUTE">USER_ROUTE</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Components</p>
+                    <h1>CountCards</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            &ltCountCards <i>countData</i> /&gt
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class='vertical-section'>
+                <div class="members">
+                    <div class="member">
+                        <div class=name>
+                            <span class="tag">Constructor</span>
+                        </div>
+                        
+
+
+    
+    <h4 class="name" id="CountCards">
+        <a class="href-link" href="#CountCards">#</a>
+        
+        <span class="code-name">
+            
+                &ltCountCards <i>countData</i> /&gt
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Component for mapping all the counters data into <a href="CountCard.html"><code>&lt;CountCard /&gt;</code></a> child components.</p>
+<p>Called from parent component <a href="ProfilPage.html"><code>&lt;ProfilPage /&gt;</code></a>.</p>
+    </div>
+    
+
+
+
+
+
+
+
+    
+        <h5>PropTypes:</h5>
+        
+<div class="table-container">
+  <table class="params table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th class="last">Default</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>countData</code></td>
+            <td>
+              array
+            </td>
+            <td>Yes</td>
+            <td>User's counters data</td>
+            <td></td>
+          </tr>
+          
+    
+    </tbody>
+  </table>
+</div>
+    
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="render_components_countCards.js.html" class="button">View Source</a>
+            <span>
+                <a href="render_components_countCards.js.html">render/components/countCards.js</a>, <a href="render_components_countCards.js.html#line12">line 12</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+    
+    </div>
+    
+        
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

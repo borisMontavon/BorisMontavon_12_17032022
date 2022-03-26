@@ -1,8 +1,22 @@
+/**
+ * Average sessions data formatting service.
+ * @class
+ */
+
 class AverageSessionDataService {
-    // Average sessions duration data formatting
+    
+    /** 
+     * 
+     * Formats the data fetched from the {@link AVERAGE_SESSIONS_ROUTE|average session API} into usable data for the {@link AverageSessionsGraph|&lt;AverageSessionsGraph /&gt;} to render a {@link https://recharts.org/en-US/api/LineChart|Line Chart}.
+     * 
+     * @param {Object} averageSessionData Data fetched from the API
+     * @return {Array} Formatted data used by {@link https://recharts.org/en-US/api/LineChart|Line Chart} component
+     * 
+    */
     static formatAverageSessionData(averageSessionData) {
         let formattedData = [];
 
+        // Formats numbers into matching day label
         function formatDay(day) {
             switch(day) {
                 case 1:

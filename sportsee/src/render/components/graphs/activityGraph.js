@@ -3,6 +3,10 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 
 /**
  * Component for showing activity details of the user.
+ * 
+ * Displays a {@link https://recharts.org/en-US/api/BarChart|Bar Chart} graph from the library {@link https://recharts.org/en-US|Recharts}.
+ * 
+ * Called from parent component {@link ProfilPage|&lt;ProfilPage /&gt;}.
  *
  * @component
  */
@@ -78,7 +82,7 @@ ActivityGraph.propTypes = {
     /**
      * User's activity data
      */
-    activityData: PropTypes.array
+    activityData: PropTypes.array.isRequired
 }
 
 export default ActivityGraph;

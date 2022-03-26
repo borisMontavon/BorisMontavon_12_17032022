@@ -1,6 +1,16 @@
 import PropTypes from "prop-types";
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 
+/**
+ * Component for showing score of the user.
+ * 
+ * Displays a {@link https://recharts.org/en-US/api/PieChart|Pie Chart} graph from the library {@link https://recharts.org/en-US|Recharts}.
+ * 
+ * Called from parent component {@link ProfilPage|&lt;ProfilPage /&gt;}.
+ *
+ * @component
+ */
+
 function ScoreGraph({scoreData}) {
     const fillData = [
         {
@@ -44,7 +54,10 @@ function ScoreGraph({scoreData}) {
 }
 
 ScoreGraph.propTypes = {
-    scoreData: PropTypes.object
+    /**
+     * User's score data
+     */
+    scoreData: PropTypes.object.isRequired
 }
 
 export default ScoreGraph;
