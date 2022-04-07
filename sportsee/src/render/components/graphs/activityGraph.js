@@ -26,7 +26,7 @@ function ActivityGraph({activityData}) {
     };
 
     return (
-        <div className="bg-cardDark rounded-md relative">
+        <div className="bg-cardLight rounded-md relative">
             <ResponsiveContainer
                 width="100%"
                 height={260}
@@ -61,7 +61,7 @@ function ActivityGraph({activityData}) {
                     <Tooltip content={<CustomTooltip />} />
                     <Bar
                         dataKey="kilogram"
-                        fill="var(--white)"
+                        fill="var(--gray)"
                         maxBarSize={6}
                     />
                     <Bar
@@ -72,7 +72,17 @@ function ActivityGraph({activityData}) {
                 </BarChart>
             </ResponsiveContainer>
             <div className="absolute top-2 left-4">
-                <span className="font-medium text-medium text-white">Activité quotidienne</span>
+                <span className="font-medium text-sm text-gray">Activité quotidienne</span>
+            </div>
+            <div className="absolute top-2 right-4 flex">
+                <div className="mr-3 flex justify-center items-center">
+                    <span className="block h-2 w-2 rounded-full bg-gray mr-1"></span>
+                    <span className="font-medium text-sm text-gray">Poids (kg)</span>
+                </div>
+                <div className="flex justify-center items-center">
+                    <span className="block h-2 w-2 rounded-full bg-primary mr-1"></span>
+                    <span className="font-medium text-sm text-gray">Calories brûlées (kCal)</span>
+                </div>
             </div>
         </div>
     );

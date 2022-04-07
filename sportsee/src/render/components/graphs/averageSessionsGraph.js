@@ -57,7 +57,7 @@ function AverageSessionsGraph({averageSessionsData}) {
                 </LineChart>
             </ResponsiveContainer>
             <div className="absolute top-2 left-4">
-                <span className="font-medum text-medium text-textMuted">Durée moyenne des<br />sessions</span>
+                <span className="font-medum text-medium text-white">Durée moyenne des<br />sessions</span>
             </div>
         </div>
     );

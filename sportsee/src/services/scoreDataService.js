@@ -28,7 +28,7 @@ class ScoreDataService {
                 },
                 {
                     "score": 1 - getUserScore(userData.data),
-                    "fill": "var(--card-dark)"
+                    "fill": "var(--card-light)"
                 }
             ],
             "scorePercentage": `${getUserScore(userData.data) * 100}%`

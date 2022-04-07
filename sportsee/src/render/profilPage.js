@@ -82,7 +82,7 @@ function ProfilPage() {
     }
 
     if (!isLoadedProfile) {
-        return <p className="text-white">Loading...</p>
+        return <p className="text-gray">Loading...</p>
     }
 
     return (

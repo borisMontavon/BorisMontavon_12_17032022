@@ -8,7 +8,7 @@ import HomePage from "./render/homePage";
 
 function App() {
     return (
-        <div className="min-h-screen bg-bgDark xl:overflow-hidden">
+        <div className="min-h-screen bg-white xl:overflow-hidden">
             <HorizontalNav />
             <VerticalNav />
             <Routes>

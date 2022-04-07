@@ -15,12 +15,12 @@ function ScoreGraph({scoreData}) {
     const fillData = [
         {
             "score": 1,
-            "fill": "var(--bg-dark)"
+            "fill": "var(--white)"
         }
     ];
 
     return (
-        <div className="bg-cardDark rounded-md relative">
+        <div className="bg-cardLight rounded-md relative">
             <ResponsiveContainer
                 width="100%"
                 height={260}
@@ -43,11 +43,11 @@ function ScoreGraph({scoreData}) {
                 </PieChart>
             </ResponsiveContainer>
             <div className="absolute top-2/4 -translate-y-1/2 left-2/4 -translate-x-1/2 flex flex-col items-center">
-                <span className="font-bold text-2xl text-white">{scoreData.scorePercentage}</span>
+                <span className="font-bold text-2xl text-gray">{scoreData.scorePercentage}</span>
                 <span className="text-textMuted text-base font-medium text-center">de votre<br />obectif</span>
             </div>
             <div className="absolute top-2 left-4">
-                <span className="font-medium text-medium text-white">Score</span>
+                <span className="font-medium text-medium text-gray">Score</span>
             </div>
         </div>
     );

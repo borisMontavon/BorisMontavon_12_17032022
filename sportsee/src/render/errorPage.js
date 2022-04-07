@@ -15,7 +15,7 @@ function ErrorPage({title, content}) {
                 <span className="text-7xl text-primary font-bold">{title}</span>
                 <FontAwesomeIcon icon={faPersonDrowning} className="text-7xl text-primary mt-4" />
             </div>
-            <span className="text-2xl text-white font-normal my-8">{content}</span>
+            <span className="text-2xl text-gray font-normal my-8">{content}</span>
         </div>
     );
 }
