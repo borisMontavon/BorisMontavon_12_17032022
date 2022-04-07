@@ -77,11 +77,11 @@ function ActivityGraph({activityData}) {
             <div className="absolute top-2 right-4 flex">
                 <div className="mr-3 flex justify-center items-center">
                     <span className="block h-2 w-2 rounded-full bg-gray mr-1"></span>
-                    <span className="font-medium text-sm text-gray">Poids (kg)</span>
+                    <span className="font-medium text-sm text-textMuted">Poids (kg)</span>
                 </div>
                 <div className="flex justify-center items-center">
                     <span className="block h-2 w-2 rounded-full bg-primary mr-1"></span>
-                    <span className="font-medium text-sm text-gray">Calories brûlées (kCal)</span>
+                    <span className="font-medium text-sm text-textMuted">Calories brûlées (kCal)</span>
                 </div>
             </div>
         </div>
